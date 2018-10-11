@@ -1,0 +1,35 @@
+﻿@using AspNetMvcSubResourceIntegrityHelper
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+
+	@Html.SRICssLink("/Content/bootstrap.css")
+	@Scripts.Render("~/bundles/modernizr")
+	@*@Html.SRIResourceWithTags("<script src=\"/Scripts/bootstrap.js\"></script>")*@
+
+	@Html.SRICssLink("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron-fluid">
+			Hello there.
+		</div>
+	</div>
+	<div class="container body-content">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+		</footer>
+	</div>
+
+	@Html.SRIScriptLink("/Scripts/jquery-3.3.1.js")
+
+
+	@RenderSection("scripts", required: false)
+</body>
+</html>

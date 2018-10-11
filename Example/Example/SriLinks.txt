@@ -1,0 +1,4 @@
+﻿<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+<script src="/Scripts/jquery-3.3.1.js" ></script>	<script src="/Scripts/jquery-3.3.1.js"  integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous" ></script>
+<script src="/Scripts/bootstrap.js" ></script>	<script src="/Scripts/bootstrap.js"  integrity="sha384-fyOlGC+soQAvVFysE2KxkXaVKf75M1Zyo6RG7thLEEwD7p6/Cso7G/iV9tPM0C/a" crossorigin="anonymous" ></script>
+<link href="/Content/bootstrap.css" rel="stylesheet" />	<link href="/Content/bootstrap.css" rel="stylesheet"  integrity="sha384-2QMA5oZ3MEXJddkHyZE/e/C1bd30ZUPdzqHrsaHMP3aGDbPA9yh77XDHXC9Imxw+" crossorigin="anonymous" />

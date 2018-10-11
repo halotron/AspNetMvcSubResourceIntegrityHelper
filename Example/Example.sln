@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{DB2A54E8-756A-4C13-AEF1-9C1B124DB83A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetMvcSubResourceIntegrityHelper", "AspNetMvcSubResourceIntegrityHelper\AspNetMvcSubResourceIntegrityHelper.csproj", "{BCF7E857-AB20-46BF-AD33-A591A9460011}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB2A54E8-756A-4C13-AEF1-9C1B124DB83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2A54E8-756A-4C13-AEF1-9C1B124DB83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2A54E8-756A-4C13-AEF1-9C1B124DB83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2A54E8-756A-4C13-AEF1-9C1B124DB83A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF7E857-AB20-46BF-AD33-A591A9460011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF7E857-AB20-46BF-AD33-A591A9460011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF7E857-AB20-46BF-AD33-A591A9460011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF7E857-AB20-46BF-AD33-A591A9460011}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68F08A57-1D81-4DBF-90AE-92CCDC9B8835}
+	EndGlobalSection
+EndGlobal

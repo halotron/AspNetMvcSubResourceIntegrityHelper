@@ -69,6 +69,7 @@
     <Compile Include="SubResourceIntegrityHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AspNetMvcSubResourceIntegrityHelper.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

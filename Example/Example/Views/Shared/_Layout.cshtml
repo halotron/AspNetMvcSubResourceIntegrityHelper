@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title - My ASP.NET Application</title>
 
+	@Html.SRIWrapStylesRender(Styles.Render("~/Content/css"))
 	@Html.SRICssLink("/Content/bootstrap.css")
-	@Scripts.Render("~/bundles/modernizr")
-	@*@Html.SRIResourceWithTags("<script src=\"/Scripts/bootstrap.js\"></script>")*@
+	@Html.SRIWrapScriptsRender(@Scripts.Render("~/bundles/bunchofscripts"))
+	@Html.SRIResourceWithTags("<script src=\"/Scripts/bootstrap.js\"></script>")
 
 	@Html.SRICssLink("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
 

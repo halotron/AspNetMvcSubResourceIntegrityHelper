@@ -100,10 +100,6 @@ namespace AspNetMvcSubResourceIntegrityHelper
 							}
 						}
 					}
-					if (_dictionary.ContainsKey(linkWithTags))
-					{
-						return new HtmlString(_dictionary[linkWithTags]);
-					}
 				}
 				else
 				{
@@ -127,7 +123,8 @@ namespace AspNetMvcSubResourceIntegrityHelper
 				{
 					return new HtmlString(_dictionary[linkWithTags]);
 				}
-				if (ConfigHelper.SriDownloadIfNotPresentInFile)
+
+                if (ConfigHelper.SriDownloadIfNotPresentInFile)
 				{
 					var r = Regex.Match(linkWithTags, ".*(<script|<link){1}.*(src=\"|href=\"){1}([^\"]*)(.*)",
 						RegexOptions.IgnoreCase);
@@ -275,33 +272,43 @@ namespace AspNetMvcSubResourceIntegrityHelper
 			return SRIResourceWithTags(helper, "<script src=\"" + link + "\" ></script>");
 		}
 
-		public static IHtmlString SRIWrapStylesRender(this HtmlHelper helper, IHtmlString htmlString)
-		{
-			var str = htmlString.ToHtmlString();
-			StringBuilder sb = new StringBuilder();
-			if (str.StartsWith("<link href=\""))
-			{
-				if (str.Contains("\n"))
-				{
+        public static IHtmlString SRIWrapScriptsRender(this HtmlHelper helper, IHtmlString htmlString)
+        {
+            return DoEachRow(helper, htmlString, "<script ");
+        }
 
-					foreach (var rad in str.Split('\n'))
-					{
-						sb.Append(SRIResourceWithTags(helper, rad.Trim()));
-					}
-					return new HtmlString(sb.ToString());
-				}
-				else
-				{
-					var delar = str.Split(new[] { "/>" }, StringSplitOptions.RemoveEmptyEntries);
-					foreach (var del in delar)
-					{
-						sb.Append(SRIResourceWithTags(helper, del.Trim()));
-					}
-					return new HtmlString(sb.ToString());
-				}
-			}
-			return htmlString;
-		}
 
-	}
+        public static IHtmlString SRIWrapStylesRender(this HtmlHelper helper, IHtmlString htmlString)
+        {
+            return DoEachRow(helper, htmlString, "<link href=\"");
+        }
+
+        private static IHtmlString DoEachRow(HtmlHelper helper, IHtmlString htmlString, string firstStartsWith)
+        {
+            var str = htmlString.ToHtmlString();
+            StringBuilder sb = new StringBuilder();
+            if (str.StartsWith(firstStartsWith))
+            {
+                if (str.Contains("\n"))
+                {
+
+                    foreach (var rad in str.Split('\n'))
+                    {
+                        sb.Append(SRIResourceWithTags(helper, rad.Trim()));
+                    }
+                    return new HtmlString(sb.ToString());
+                }
+                else
+                {
+                    var delar = str.Split(new[] { "/>" }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (var del in delar)
+                    {
+                        sb.Append(SRIResourceWithTags(helper, del.Trim()));
+                    }
+                    return new HtmlString(sb.ToString());
+                }
+            }
+            return htmlString;
+        }
+    }
 }
